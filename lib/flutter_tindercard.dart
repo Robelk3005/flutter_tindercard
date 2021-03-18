@@ -298,7 +298,7 @@ class _TinderSwapCardState extends State<TinderSwapCard>
           }
 
           if (widget.swipeCompleteCallback != null) {
-            widget.swipeCompleteCallback(orientation, index);
+            widget.swipeCompleteCallback(orientation);
           }
         }
       },
@@ -320,7 +320,7 @@ enum CardSwipeOrientation { left, right, recover, up, down }
 /// swipe card to [CardSwipeOrientation.left] or [CardSwipeOrientation.right]
 /// , [CardSwipeOrientation.recover] means back to start.
 typedef CardSwipeCompleteCallback = void Function(
-    CardSwipeOrientation orientation, int index);
+    CardSwipeOrientation orientation);
 
 /// [DragUpdateDetails] of swiping card.
 typedef CardDragUpdateCallback = void Function(
